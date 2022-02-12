@@ -5,6 +5,7 @@
         <title>test iig</title>
         @include('layouts.include')
         <link rel='stylesheet' type="text/css" href="css/style.css" >
+        <script src="{{asset('js/validate_ediprofile.js')}}" defer></script>
     </head>
     <body>
         @include('layouts.app')
@@ -15,7 +16,7 @@
                     <div class="card">
                         <div class="card-header blue_bg text-white">แก้ไขโปรไฟล์</div>
                         <div class="card-body">
-                            <form autocomplete="off" name="register" id="register" method="POST" action="{{route('edit_profile')}}"  enctype="multipart/form-data">
+                            <form autocomplete="off" name="profile" id="profile" method="POST" action="{{route('edit_profile')}}"  enctype="multipart/form-data">
                                 @csrf
                                 @if(Session::has('message'))
                                     <div>
@@ -73,7 +74,7 @@
                                 <div class="form-group row">
                                     <label for="new_password" class="col-md-4 col-form-label text-md-right">รหัสผ่านใหม่</label>
 
-                                    <div id="input_confirm_password" class="col-md-6">
+                                    <div id="input_new_password" class="col-md-6">
                                         <input id="new_password" type="password" class="form-control"  name="new_password" required autocomplete="new-password">
                                     </div>
                                 </div>
@@ -81,16 +82,16 @@
                                 <div class="form-group row">
                                     <label for="new_password_confirm" class="col-md-4 col-form-label text-md-right">ยืนยันรหัสผ่านใหม่</label>
 
-                                    <div id="input_confirm_password" class="col-md-6">
+                                    <div id="input_new_password_confirm" class="col-md-6">
                                         <input id="new_password_confirm" type="password" class="form-control"  name="new_password_confirmation" required autocomplete="new-password">
                                     </div>
                                 </div>
 
                                 <div class="form-group row mb-0">
                                     <div class="col-md-6 offset-md-4">
-                                        <button id="" class="btn btn-primary" type="submit">
+                                        <a id="validate_editProfile" class="btn btn-primary" type="submit">
                                             แก้ไขโปรไฟล์
-                                        </button>
+                                        </a>
                                     </div>
                                 </div>
                             </form>
