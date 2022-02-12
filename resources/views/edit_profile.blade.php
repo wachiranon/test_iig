@@ -4,8 +4,13 @@
 
         <title>test iig</title>
         @include('layouts.include')
-        <link rel='stylesheet' type="text/css" href="css/style.css" >
-        <script src="{{asset('js/validate_ediprofile.js')}}" defer></script>
+        <link rel='stylesheet' type="text/css" href="css/style.css">
+        <style>
+            .span{
+                font-size: 10px !important;
+            }
+        </style>
+        <script src="{{asset('js/validate_editprofile.js')}}" defer></script>
     </head>
     <body>
         @include('layouts.app')

@@ -21,27 +21,27 @@ $('#validate_editProfile').click(function() {
     // }
 
     // Check Profile img
-    function getExtension(filename) {
-        var parts = filename.split('.');
-        return parts[parts.length - 1];
-    }
+    // function getExtension(filename) {
+    //     var parts = filename.split('.');
+    //     return parts[parts.length - 1];
+    // }
 
-    function isImage(filename) {
-        console.log(filename);
-        var ext = getExtension(filename);
-        switch (ext.toLowerCase()) {
-          case 'jpg':
-          case 'png':
-            //etc
-            return true;
-        }
-        return false;
-    }
-    if(!isImage(profile_img.val())){
-        $("#profile_img").removeClass("custom-file-input").addClass("custom-file-input border border-danger is-invalid");
-        alert("ชนิดไฟล์ไม่ถูกต้อง ไฟล์ต้องเป็นรูปภาพนามสกุล .jpg หรือ .png เท่านั้น");
-        var flag = true;
-    }
+    // function isImage(filename) {
+    //     console.log(filename);
+    //     var ext = getExtension(filename);
+    //     switch (ext.toLowerCase()) {
+    //       case 'jpg':
+    //       case 'png':
+    //         //etc
+    //         return true;
+    //     }
+    //     return false;
+    // }
+    // if(!isImage(profile_img.val())){
+    //     $("#profile_img").removeClass("custom-file-input").addClass("custom-file-input border border-danger is-invalid");
+    //     alert("ชนิดไฟล์ไม่ถูกต้อง ไฟล์ต้องเป็นรูปภาพนามสกุล .jpg หรือ .png เท่านั้น");
+    //     var flag = true;
+    // }
 
     // Check Password
     var temp_type = "";  
@@ -84,6 +84,6 @@ $('#validate_editProfile').click(function() {
     }
     
     if(flag == false){
-        document.getElementById('register').submit();
+        document.getElementById('profile').submit();
     }
 });

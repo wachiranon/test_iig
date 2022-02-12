@@ -85,6 +85,6 @@ $('#validate_register').click(function() {
     }
     
     if(flag == false){
-        document.getElementById('profile').submit();
+        document.getElementById('register').submit();
     }
 });
